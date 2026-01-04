@@ -58,3 +58,16 @@ function decimalToBinary(decimal) {
   if (isNaN(decimal)) return "Invalid decimal input";
   return Number(decimal).toString(2);
 }
+
+// gsap Animations
+var lt=gsap.timeline();
+lt.from("header h1",{
+  x:1000,
+  duration:0.5,
+  delay:1,
+  ease:"power.out"
+});
+lt.from("main",{
+  y:1000,
+  duration:0.5,
+});
