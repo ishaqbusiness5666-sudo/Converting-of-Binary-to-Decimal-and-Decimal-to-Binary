@@ -11,16 +11,17 @@ html,body{
 }
 body{
     background:linear-gradient(to top,#0d2440,#2e5e99,#7ba4d0);
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color:#e7f0fa;
-    gap:20px;
+    gap:50px;
+    overflow: hidden;
 }
-body h1{
+header h1{
     color:#fff;
-    font-size:2.2rem;
+    font-size:1.2rem;
     font-weight: 700;
     flex-grow:1;
     flex-shrink:1;
@@ -31,13 +32,13 @@ main{
     align-items: center;
     justify-content:space-between;
     background-color: #7ba4d0;
-    border-radius:10px;
+    border-radius:7px;
     border: 1.5px solid #0d2440;
     box-shadow: 0px 0px 6px #7ba4d0 ;
-    padding:50px 100px;
-    gap:15px;
-    flex-shrink:1;
-    flex-grow:1;
+    max-width:600px;
+    width:300px;
+    height:60vh;
+    padding:10px 20px;
 }
 main button{
     border:none;
@@ -45,7 +46,6 @@ main button{
     border-radius:7px;
     background-color: #0d2440;
     color: #e7f0fa;
-    flex:1 1 ;
 }
 main button span{
     transition: all 0.3s ease;
@@ -58,11 +58,9 @@ main button span{
     position: relative;
     top:0px;
     right:15px;
-    flex: 1 1 ;
 }
 main label{
     font-size:1.3rem;
-    flex: 1 1 ;
 }
 main input{
     padding:14px 20px;
@@ -71,7 +69,6 @@ main input{
     box-shadow:0px 0px 10px #0d244082;
     font-size:0.9rem;
     transition: all 0.3s ease;
-    flex: 1 1;
 }
 main input:focus{
     outline:1px solid #0d2440;
@@ -84,7 +81,6 @@ main input:active{
     font-size:1rem;
     position: relative;
     transition: all 0.3s ease;
-    flex:1 1 ;
 }
 #convertBtn:hover{
     scale:1.07;
@@ -97,7 +93,6 @@ main h3{
     color:#fff;
     font-weight:600;
     font-size:1.3rem;
-    flex: 1 1;
 }
 main p{
     width:12rem;
@@ -108,7 +103,6 @@ main p{
     padding:10px 20px;
     text-align:center;
     color:#b1b1b1;
-    flex:1 1;
 }
 
 /* for button  */
@@ -116,4 +110,10 @@ main p{
     right:-14px;
     background-color:#7ba4d0;
     rotate:360deg;
+}
+/* for tablet screens */
+@media (min-width:767px) {
+    main{
+        width:500px;
+    }
 }
